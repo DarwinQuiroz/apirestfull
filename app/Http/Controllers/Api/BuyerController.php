@@ -14,7 +14,7 @@ class BuyerController extends ApiController
      */
     public function index()
     {
-        $buyers = Buyer::whereHas('transactions')->paginate(10);
+        $buyers = Buyer::has('transactions')->get();
 
         return $this->showAll($buyers);
     }
@@ -26,10 +26,8 @@ class BuyerController extends ApiController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Buyer $buyer)
     {
-        $buyer = Buyer::whereHas('transactions')->findOrFail($id);
-
         return $this->showOne($buyer);
     }
 }
