@@ -22,6 +22,7 @@ class CreateProductsTable extends Migration
             $table->unsignedInteger('quantity');
             $table->enum('status', [Product::PRODUCTO_DISPONIBLE, Product::PRODUCTO_NO_DISPONIBLE])->default(Product::PRODUCTO_NO_DISPONIBLE);
             $table->string('image');
+            $table->softDeletes();
 
             $table->foreign('seller_id')->references('id')->on('users')->onDelete('CASCADE');
             $table->timestamps();

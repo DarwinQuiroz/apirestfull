@@ -18,6 +18,7 @@ class CreateTransactionsTable extends Migration
             $table->unsignedBigInteger('buyer_id');
             $table->unsignedBigInteger('product_id');
             $table->unsignedInteger('quantity');
+            $table->softDeletes();
 
             $table->foreign('buyer_id')->references('id')->on('users')->onDelete('CASCADE');
             $table->foreign('product_id')->references('id')->on('products')->onDelete('CASCADE');

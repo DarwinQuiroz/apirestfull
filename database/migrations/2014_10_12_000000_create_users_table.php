@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('verification_token')->nullable();
             $table->enum('admin', ['true', 'false'])->default(User::USUARIO_REGULAR);
             $table->rememberToken();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
