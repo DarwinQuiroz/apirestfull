@@ -95,7 +95,8 @@ class Handler extends ExceptionHandler
             }
         }
 
-        return config('app.degub') ? parent::render($request, $exception) : $this->errorResponse('Falla inesperada, intente luego', 500);
+        return parent::render($request, $exception);
+        // return config('app.degub') ? parent::render($request, $exception) : $this->errorResponse('Falla inesperada, intente luego', 500);
     }
 
     protected function unauthenticated($request, AuthenticationException $exception)
