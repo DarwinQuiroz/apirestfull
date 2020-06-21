@@ -19,6 +19,10 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::apiResource('buyers', 'Api\BuyerController', ['only' => ['index', 'show']]);
+Route::apiResource('buyers.transactions', 'Api\BuyerTransactionController', ['only' => ['index']]);
+Route::apiResource('buyers.products', 'Api\BuyerProductController', ['only' => ['index']]);
+Route::apiResource('buyers.sellers', 'Api\BuyerSellerController', ['only' => ['index']]);
+Route::apiResource('buyers.categories', 'Api\BuyerCategoryController', ['only' => ['index']]);
 
 Route::apiResource('categories', 'Api\CategoryController');
 
