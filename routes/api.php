@@ -37,5 +37,9 @@ Route::apiResource('transactions.categories', 'Api\TransactionCategoryController
 Route::apiResource('transactions.sellers', 'Api\TransactionSellerController', ['only' => ['index']]);
 
 Route::apiResource('sellers', 'Api\SellerController', ['only' => ['index', 'show']]);
+Route::apiResource('sellers.transactions', 'Api\SellerTransactionController', ['only' => ['index']]);
+Route::apiResource('sellers.categories', 'Api\SellerCategoryController', ['only' => ['index']]);
+Route::apiResource('sellers.buyers', 'Api\SellerBuyerController', ['only' => ['index']]);
+Route::apiResource('sellers.products', 'Api\SellerProductController', ['except' => ['show']]);
 
 Route::apiResource('users', 'Api\UserController');
