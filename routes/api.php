@@ -47,3 +47,5 @@ Route::apiResource('sellers.buyers', 'Api\SellerBuyerController', ['only' => ['i
 Route::apiResource('sellers.products', 'Api\SellerProductController', ['except' => ['show']]);
 
 Route::apiResource('users', 'Api\UserController');
+Route::get('users/verify/{token}', 'Api\UserController@verify')->name('verify');
+Route::get('users/{user}/resend', 'Api\UserController@resend')->name('resend');
