@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Transformers\ProductTransformer;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -15,6 +16,7 @@ class Product extends Model
     protected $fillable = ['name', 'description', 'quantity', 'status', 'image', 'seller_id'];
     protected $date = ['deleted_at'];
     protected $hidden = ['pivot'];
+    public $transformer = ProductTransformer::class;
 
     public function categories()
     {

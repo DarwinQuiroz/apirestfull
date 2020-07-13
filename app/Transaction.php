@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Transformers\TransactionTransformer;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Transaction extends Model
@@ -11,6 +12,7 @@ class Transaction extends Model
 
     protected $fillable = ['quantity', 'buyer_id', 'product_id'];
     protected $date = ['deleted_at'];
+    public $transformer = TransactionTransformer::class;
 
     public function buyer()
     {
