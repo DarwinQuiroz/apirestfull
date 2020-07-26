@@ -10,7 +10,10 @@ use App\Traits\ApiResponser;
 
 class BuyerProductController extends ApiController
 {
-    use ApiResponser;
+    public function __construct()
+    {
+        parent::__construct();
+    }
 
     /**
      * Display a listing of the resource.

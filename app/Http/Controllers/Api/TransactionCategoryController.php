@@ -10,7 +10,10 @@ use App\Traits\ApiResponser;
 
 class TransactionCategoryController extends ApiController
 {
-    use ApiResponser;
+    public function __construct()
+    {
+        $this->middleware('client.credentials')->only(['index']);
+    }
 
     /**
      * Display a listing of the resource.

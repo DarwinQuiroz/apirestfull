@@ -81,7 +81,7 @@ class Handler extends ExceptionHandler
         }
         if($exception instanceof MethodNotAllowedHttpException)
         {
-            return $this->errorResponse('El método especificado en al petición no es válido', 405);
+            return $this->errorResponse('El método especificado en la petición no es válido', 405);
         }
         if($exception instanceof HttpException)
         {
