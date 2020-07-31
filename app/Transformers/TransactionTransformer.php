@@ -69,7 +69,7 @@ class TransactionTransformer extends TransformerAbstract
     {
         $attributes = [
             'identificador' => 'id',
-            'cantidad' => 'quatity',
+            'cantidad' => 'quantity',
             'comprador' => 'buyer_id',
             'producto' => 'product_id',
             'fechaCreacion' => 'created_at',
@@ -84,7 +84,7 @@ class TransactionTransformer extends TransformerAbstract
     {
         $attributes = [
             'id' => 'identificador',
-            'quatity' => 'cantidad',
+            'quantity' => 'cantidad',
             'buyer_id' => 'comprador',
             'product_id' => 'producto',
             'created_at' => 'fechaCreacion',

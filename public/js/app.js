@@ -39726,8 +39726,8 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "tbody",
-                  _vm._l(_vm.tokens, function(index, token) {
-                    return _c("tr", { key: index }, [
+                  _vm._l(_vm.tokens, function(token) {
+                    return _c("tr", [
                       _c(
                         "td",
                         { staticStyle: { "vertical-align": "middle" } },
@@ -39792,8 +39792,8 @@ var render = function() {
                     _vm._v(" "),
                     _c(
                       "ul",
-                      _vm._l(_vm.form.errors, function(index, error) {
-                        return _c("li", { key: index }, [
+                      _vm._l(_vm.form.errors, function(error) {
+                        return _c("li", [
                           _vm._v(
                             "\n                                " +
                               _vm._s(error) +
@@ -39863,8 +39863,8 @@ var render = function() {
                         _c(
                           "div",
                           { staticClass: "col-md-6" },
-                          _vm._l(_vm.scopes, function(index, scope) {
-                            return _c("div", { key: index }, [
+                          _vm._l(_vm.scopes, function(scope) {
+                            return _c("div", { key: scope.id }, [
                               _c("div", { staticClass: "checkbox" }, [
                                 _c("label", [
                                   _c("input", {
