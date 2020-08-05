@@ -58,6 +58,15 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        $response = $this->handleException($request, $exception);
+        // return config('app.degub') ? parent::render($request, $exception) : $this->errorResponse('Falla inesperada, intente luego', 500);
+        app(CorsService::class)->addActualRequestHeaders($response, $request);
+
+        return $response;
+    }
+
+    public function handleException($request, Exception $exception)
+    {
         if($exception instanceof ValidationException)
         {
             $this->convertValidationExceptionToResponse($exception, $request);
@@ -101,7 +110,6 @@ class Handler extends ExceptionHandler
         }
 
         return parent::render($request, $exception);
-        // return config('app.degub') ? parent::render($request, $exception) : $this->errorResponse('Falla inesperada, intente luego', 500);
     }
 
     protected function unauthenticated($request, AuthenticationException $exception)
