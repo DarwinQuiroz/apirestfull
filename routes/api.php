@@ -46,6 +46,7 @@ Route::apiResource('sellers.categories', 'Api\SellerCategoryController', ['only'
 Route::apiResource('sellers.buyers', 'Api\SellerBuyerController', ['only' => ['index']]);
 Route::apiResource('sellers.products', 'Api\SellerProductController', ['except' => ['show']]);
 
+Route::get('users/me', 'Api\UserController@me')->name('me');
 Route::apiResource('users', 'Api\UserController');
 Route::get('users/verify/{token}', 'Api\UserController@verify')->name('verify');
 Route::get('users/{user}/resend', 'Api\UserController@resend')->name('resend');

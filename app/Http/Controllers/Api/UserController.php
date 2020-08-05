@@ -162,4 +162,11 @@ class UserController extends ApiController
 
         return $this->showMessage('El correo de verificaión se ha reenviado');
     }
+
+    public function me(Request $request)
+    {
+        $user = $request->user();
+
+        return $this->showOne($user);
+    }
 }
