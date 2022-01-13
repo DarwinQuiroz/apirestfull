@@ -1564,6 +1564,10 @@
                 "league",
                 "rest"
             ],
+            "support": {
+                "issues": "https://github.com/thephpleague/fractal/issues",
+                "source": "https://github.com/thephpleague/fractal/tree/0.19.2"
+            },
             "time": "2020-01-24T23:17:29+00:00"
         },
         {
@@ -2723,31 +2727,35 @@
                 "spatie",
                 "transform"
             ],
+            "support": {
+                "issues": "https://github.com/spatie/fractalistic/issues",
+                "source": "https://github.com/spatie/fractalistic/tree/master"
+            },
             "time": "2020-01-31T11:54:45+00:00"
         },
         {
             "name": "spatie/laravel-fractal",
-            "version": "5.7.0",
+            "version": "5.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-fractal.git",
-                "reference": "482b73a7942d14087167b32c6681351c81afaeb3"
+                "reference": "335a8d0e9e966244a552c6970ac690b18c402d90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-fractal/zipball/482b73a7942d14087167b32c6681351c81afaeb3",
-                "reference": "482b73a7942d14087167b32c6681351c81afaeb3",
+                "url": "https://api.github.com/repos/spatie/laravel-fractal/zipball/335a8d0e9e966244a552c6970ac690b18c402d90",
+                "reference": "335a8d0e9e966244a552c6970ac690b18c402d90",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "~5.8.0|^6.0|^7.0",
-                "illuminate/support": "~5.8.0|^6.0|^7.0",
+                "illuminate/contracts": "~5.8.0|^6.0|^7.0|^8.0",
+                "illuminate/support": "~5.8.0|^6.0|^7.0|^8.0",
                 "php": "^7.2",
                 "spatie/fractalistic": "^2.5"
             },
             "require-dev": {
                 "dms/phpunit-arraysubset-asserts": "^0.1.0",
-                "orchestra/testbench": "~3.8.0|^4.0|^5.0"
+                "orchestra/testbench": "~3.8.0|^4.0|^5.0|^6.0"
             },
             "type": "library",
             "extra": {
@@ -2791,7 +2799,17 @@
                 "spatie",
                 "transform"
             ],
-            "time": "2020-03-02T18:40:49+00:00"
+            "support": {
+                "issues": "https://github.com/spatie/laravel-fractal/issues",
+                "source": "https://github.com/spatie/laravel-fractal/tree/5.8.0"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                }
+            ],
+            "time": "2020-09-08T20:28:01+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
